@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RunGroopWebApp.Models
 {
-    public class Club
+    public class Race
     {
         [Key]
         public int Id { get; set; }
@@ -14,8 +14,8 @@ namespace RunGroopWebApp.Models
         [ForeignKey("Adress")]
         public int AddressId { get; set; }
         public Address Address { get; set; }
-        public ClubCategory ClubCategory { get; set; }
-        [ForeignKey("AppUser ")]
+        public RaceCategory RaceCategory { get; set; }
+        [ForeignKey("AppUser")]
         public string? AppUserId { get; set; }
         public AppUser? AppUser { get; set; }
     }
