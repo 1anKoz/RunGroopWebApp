@@ -33,7 +33,7 @@ namespace RunGroopWebApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Club club)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(club);
             }
